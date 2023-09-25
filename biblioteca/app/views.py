@@ -16,6 +16,14 @@ def autores(request):
     return render(request, 'autores/autores.html', autores)
 
 
+def generos(request):
+    generos = {
+        'generos': Genero.objects.all()
+    }
+
+    return render(request, 'generos/generos.html', generos)
+
+
 def categorias(request):
     categorias = {
         'categorias': Categoria.objects.all()

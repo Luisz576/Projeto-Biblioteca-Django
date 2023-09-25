@@ -27,7 +27,7 @@ class Editora(models.Model):
         return self.nome
 
 
-class Categoria(models.Model):
+class Genero(models.Model):
     nome = models.CharField(max_length=45)
 
     def __str__(self):
@@ -38,7 +38,7 @@ class Livro(models.Model):
     nome = models.CharField(max_length=45)
     autor = models.ForeignKey(Autor, on_delete=models.CASCADE)
     editora = models.ForeignKey(Editora, on_delete=models.CASCADE)
-    categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)
+    generos = models.ManyToManyField(Genero)
     preco = models.FloatField()
     data_publicacao = models.DateTimeField()
 

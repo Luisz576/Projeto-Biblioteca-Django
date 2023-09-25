@@ -9,6 +9,7 @@ urlpatterns = [
     path('consulta/', consulta, name='consultas'),
     path('reserva/', reserva, name='reservas'),
     path('autores/', autores, name='autores'),
+    path('generos/', generos, name='autores'),
     path('editoras/', editoras, name='editoras'),
     path('categorias/', categorias, name='categorias'),
 ]

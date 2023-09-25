@@ -3,7 +3,7 @@
     <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Editoras</title>
+      <title>Autores</title>
       <!-- Incluindo Bootstrap CSS -->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     </head>
@@ -30,7 +30,7 @@
             <li class="nav-item">
               <a class="nav-link text-dark" href="/editoras/">Editoras</a>
             </li>
-             <li class="nav-item">
+            <li class="nav-item">
               <a class="nav-link text-dark" href="/generos/">Gêneros</a>
             </li>
             <li class="nav-item">
@@ -41,20 +41,16 @@
       </nav>
 
       <div class="container mt-5">
-        <h2 class="mb-4">Tabela de Editoras</h2>
+        <h2 class="mb-4">Tabela de Gêneros</h2>
             <table class="table">
               <thead>
                 <tr>
                   <th scope="col">Nome</th>
-                  <th scope="col">Site</th>
-                  <th scope="col">Cidade</th>
                 </tr>
-                {% for Editora in editoras %}
+                {% for Genero in generos %}
               </thead>
               <tbody>
-               <td>{{Editora.nome}}</td>
-               <td>{{Editora.site}}</td>
-               <td>{{Editora.cidade}}</td>
+               <td>{{Genero.nome}}</td>
               </tbody>
                {% endfor %}
             </table>
