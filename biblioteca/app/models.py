@@ -41,6 +41,7 @@ class Livro(models.Model):
     generos = models.ManyToManyField(Genero)
     preco = models.FloatField()
     data_publicacao = models.DateTimeField()
+    status = models.BooleanField(default=True)
 
     def __str__(self):
         return f'{self.nome} - {self.autor}'

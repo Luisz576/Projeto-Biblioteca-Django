@@ -51,6 +51,7 @@
                   <th scope="col">Gênero</th>
                   <th scope="col">Preço</th>
                   <th scope="col">Data Publicação</th>
+                    <th scope="col">Status</th>
                 </tr>
                 {% for Livro in consultas %}
               </thead>
@@ -65,6 +66,7 @@
                </td>
                <td>{{Livro.preco}}</td>
                <td>{{Livro.data_publicacao}}</td>
+                <td>{{Livro.status}}</td>
               </tbody>
                {% endfor %}
             </table>
